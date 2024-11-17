@@ -1,0 +1,13 @@
+projeto 2 7DaysOfCode
+<script>
+function mostra(frase){
+
+    document.write(frase);
+}
+
+let nome = prompt("Qual o seu nome ?");
+let idade = prompt("Quantos anos você tem ?");
+let liProg = prompt("Qual linguagem de programação voce esta estudando ?");
+
+mostra(`Olá ${nome}, você tem ${idade} anos e já está aprendendo ${liProg}!`); 
+</script>
