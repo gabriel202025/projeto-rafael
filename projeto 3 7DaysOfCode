@@ -1,0 +1,49 @@
+<script>
+    function escolha(area) {
+        
+        if (area === 'frontend') {
+            document.write("<p>Agora escolha uma das seguintes tecnologias:</p>");
+            document.write("<button onclick='especializacao(\"React\")'>React</button>");
+            document.write("<button onclick='especializacao(\"Vue\")'>Vue</button>");
+        } else {
+            document.write("<p>Agora escolha uma das seguintes tecnologias:</p>");
+            document.write("<button onclick='especializacao(\"C#\")'>C#</button>");
+            document.write("<button onclick='especializacao(\"Java\")'>Java</button>");
+        }
+    }
+
+    function especializacao(linguagem) {
+        document.body.innerHTML = ""; //limpa o conteudo HTML para "sumir" com os botoes
+        alert(linguagem + " é muito legal!");
+        document.body.innerHTML += "<p>Você gostaria de continuar se especializando, ou se tornar desenvolvedor Fullstack?</p>";
+        document.body.innerHTML += "<button onclick='escolhaEspecializacao(\"especializar\", \"" + linguagem + "\")'>Me especializar</button>";
+        document.body.innerHTML += "<button onclick='escolhaEspecializacao(\"fullstack\", \"" + linguagem + "\")'>Me tornar Fullstack</button>";
+    }
+
+    function escolhaEspecializacao(opcao, linguagem) {
+        document.body.innerHTML = ""; // Limpa o conteúdo do corpo do documento
+        document.write("<h2>Você escolheu aprender " + linguagem + ".</h2>"); 
+        if(opcao == "especializar"){
+            document.write("Você escolheu se especializar! ");
+        } else{
+            document.write("Você escolheu se tornar um desenvolvedor Fullstack!");
+        }
+       
+        var tecnologia = [];
+        var novaTech = "";
+        while (novaTech!="sair") {
+            
+            novaTech = prompt("Quais são as tecnologias nas quais você gostaria de se especializar ou conhecer? (Digite 'sair' para terminar)");
+            if(novaTech!="sair"){
+                tecnologia.push(novaTech);
+            }
+        }
+
+        document.write("<p>Você gostaria de aprender as seguintes tecnologias:</p>");
+        document.write("<ul>");
+        for (var i = 0; i < tecnologia.length; i++) {
+            document.write("<li>" + tecnologia[i] + "</li>");
+        }
+        document.write("</ul>");
+    }
+</script>
