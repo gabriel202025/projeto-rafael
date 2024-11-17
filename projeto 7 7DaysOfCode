@@ -1,0 +1,38 @@
+   entrada()
+        resultado = subtracao(n1, n2)
+        if(n2 < 0)
+        {
+            n2 = Math.abs(n2)
+            console.log("Pela regra da matemática - - = +.")
+            console.log("Com isso ao tentar subtrair um número negativo em uma subração ele se trasnforma em positivo")
+            console.log(`Resultado: ${n1} + ${n2} = ${resultado}`)
+        }
+        else
+        {
+        console.log(`Resultado: ${n1} - ${n2} = ${resultado}`)
+        }
+        break
+        
+    case 3:
+        entrada()
+        resultado = multiplicacao(n1, n2)
+        console.log(`Resultado: ${n1} x ${n2} = ${resultado}`)
+        break
+        
+    case 4:
+        entrada()
+        while(n2 == 0)
+        {
+            console.log("Não é possivel dividir nenhum número por zero. Digite novamente.")
+            entrada()
+        }
+        resultado = divisao(n1, n2)
+        console.log(`Resultado: ${n1} ÷ ${n2} = ${resultado}`)
+        break
+        
+    case 5:
+        console.log("Programa encerrado")
+        break
+}
+opcao = menu()
+opcao = opcao_invalida(opcao)
