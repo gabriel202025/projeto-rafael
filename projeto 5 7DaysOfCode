@@ -1,0 +1,28 @@
+let frutas = [];
+let vegetais_legumes = [];
+let doces = [];
+let laticínios = [];
+let congelados = [];
+
+let categorias = { frutas, vegetais_legumes, doces, congelados, laticínios };
+let adicionar_comidas = prompt(
+"Deseja adiconar uma comida a sua lista?"
+).toUpperCase();
+while (adicionar_comidas === "SIM") {
+let comidas = prompt("digite aqui:");
+let categoriasDisponiveis = Object.keys(categorias).join(",");
+let categoria = prompt(
+Qual das seguintes categorias essa comida pertence? ${categoriasDisponiveis}
+).toLowerCase();
+if (categorias[categoria]) {
+categorias[categoria].push(comidas);
+}
+adicionar_comidas = prompt(
+"Deseja adiconar uma comida a sua lista?"
+).toUpperCase();
+}
+if (adicionar_comidas === "NAO" || adicionar_comidas === "NÃO") {
+alert(
+essa é sua lista:  Frutas: ${frutas.join(",")} Vegetais e Legumes: ${vegetais_legumes.join(",")}; Doces: ${doces.join(",")}; 
+);
+}
