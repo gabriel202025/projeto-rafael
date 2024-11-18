@@ -5,7 +5,7 @@ function mostra(frase){
     document.write(frase);
 }
 
-let nome = prompt("Qual o seu nome ?");
+let nome = propt("Qual o seu nome ?");
 let idade = prompt("Quantos anos você tem ?");
 let liProg = prompt("Qual linguagem de programação voce esta estudando ?");
 
